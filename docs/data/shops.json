@@ -1,0 +1,2107 @@
+{
+  "generated": "2026-06-21T14:45:25.162Z",
+  "meta": {
+    "mission": "Welcome to the PFC Master List, ang official directory ng carefully curated, secured, at trusted fragrance shops recommended by the Pinoy Fragheads Community (PFC). Lahat ng shops dito ay dumaan sa evaluation: based sa personal experience, verified distributors or legitimate sourcing, at strong vouching from the community over time. Kahit curated na ’to, we still encourage everyone to practice due diligence bago bumili. Let’s stay smart and responsible consumers. Before you explore, don’t forget to follow PFC’s social media pages for updates and to support the community. Let’s continue supporting legit shops, local brands, at syempre, gawin nating mabango ang Pilipinas, one Filipino at a time. 💯✌️",
+    "preferredIntro": "Shops under this category have submitted business documents, actively participate in the fragrance community, and are well-vouched by members. These are trusted shops with which PFC admins have had personal transactions and positive client experiences. All PFC-Preferred Shops listed are issued a Certificate as proof of inclusion.\nWhile these submissions reflect a higher level of transparency and commitment from the shops, PFC’s listing is based on the documents and information provided and does not constitute a guarantee, warranty, or assumption of liability for any transactions. This process highlights the goodwill and proactive effort of participating shops to meet community standards, transparency, and accountability.",
+    "communityIntro": "These shops are well-known within the community and their links have been verified to belong to the stated stores. However, PFC has not conducted internal review, transaction validation, or authenticity checks, and therefore cannot guarantee the authenticity or quality of their products. As such, these shops are not officially certified, endorsed, or classified as PFC-Preferred, and PFC assumes no liability for any transactions made with them. Buyers are strongly advised to exercise due diligence when transacting."
+  },
+  "shops": [
+    {
+      "id": "the-dubai-shop-baliuag-by-joanne-santiago",
+      "name": "The Dubai Shop Baliuag By Joanne Santiago",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/6fepLHbDz2",
+      "links": [
+        "https://s.shopee.ph/6fepLHbDz2"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "Crossing Baliwag Bulacan, Baliwag Bayan, & Nesabel Bustos Bulacan",
+      "hasPhysicalStore": true,
+      "region": "Bulacan",
+      "location": "Nesabel Bustos Bulacan",
+      "documents": [
+        "SEC Registration",
+        "Mayor's/Business Permit",
+        "DTI Trust Mark",
+        "Middle East Distribution License",
+        "Certificate of Analysis of Perfumes"
+      ],
+      "certificate": "2026-0001",
+      "validity": "December 31, 2028",
+      "rank": 0
+    },
+    {
+      "id": "yallajrj-dxb-yalla-dubai-kafagway",
+      "name": "YallajRj.dxb  (Yalla Dubai Kafagway)",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/30lkX5QBUp",
+      "links": [
+        "https://s.shopee.ph/30lkX5QBUp"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "GF Porta Vaga, Session Road, Baguio City",
+      "hasPhysicalStore": true,
+      "region": "Baguio / Benguet",
+      "location": "Baguio City",
+      "documents": [
+        "Mayor's/Business Permit",
+        "DTI Trust Mark",
+        "DTI Business Name Registration"
+      ],
+      "certificate": "2026-0002",
+      "validity": "March 30, 2027",
+      "rank": 1
+    },
+    {
+      "id": "a-and-m-perfumes",
+      "name": "A&M Perfumes",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/7KsZMEChra",
+      "links": [
+        "https://s.shopee.ph/7KsZMEChra"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Local-Inspired",
+        "Designers",
+        "Niche"
+      ],
+      "sellsDecants": false,
+      "address": "Phase 1-A, Asohos St., Brgy. NBBS Kaunlaran, Navotas City",
+      "hasPhysicalStore": true,
+      "region": "Metro Manila",
+      "location": "Navotas City",
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 2
+    },
+    {
+      "id": "mhycks-imported-goodies",
+      "name": "Mhycks' Imported Goodies",
+      "altNames": [
+        "Mhyck's Scents"
+      ],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/mhyckscents",
+      "links": [
+        "https://www.facebook.com/mhyckscents"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "GCB Bldg. F. Castro St. Brgy. 3 Nasugbu, Batangas in front of Saveway Shoppers Mall",
+      "hasPhysicalStore": true,
+      "region": "Batangas",
+      "location": "Batangas in front of Saveway Shoppers Mall",
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 3
+    },
+    {
+      "id": "xianelle-parfums",
+      "name": "Xianelle Parfums",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://www.facebook.com/xianelleparfums",
+      "links": [
+        "https://www.facebook.com/xianelleparfums"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 4
+    },
+    {
+      "id": "dubai-pasabuy-by-miriam",
+      "name": "Dubai Pasabuy by Miriam",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "Lazada"
+      ],
+      "storeLink": "https://s.shopee.ph/40eHk8bNv7",
+      "links": [
+        "https://s.shopee.ph/40eHk8bNv7"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [
+        "BIR Registration",
+        "DTI Business Name Registration"
+      ],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 5
+    },
+    {
+      "id": "souq-shopper-ph",
+      "name": "Souq Shopper PH",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/profile.php?id=61558116400852",
+      "links": [
+        "https://www.facebook.com/profile.php?id=61558116400852"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Pasabuy",
+        "Groceries"
+      ],
+      "sellsDecants": false,
+      "address": "196 DLMP Compound, Brgy. San Roque, San Pablo City, Laguna",
+      "hasPhysicalStore": true,
+      "region": "Laguna",
+      "location": "Laguna",
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 6
+    },
+    {
+      "id": "fabulous-collection",
+      "name": "Fabulous Collection",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/60PM6vbU07",
+      "links": [
+        "https://s.shopee.ph/60PM6vbU07"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "1107 General San Miguel St, Sangandaan, Caloocan (Near SM Sangandaan)",
+      "hasPhysicalStore": true,
+      "region": "Metro Manila",
+      "location": "Caloocan (Near SM Sangandaan)",
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 7
+    },
+    {
+      "id": "mj-chua-mjchua-perfume-store",
+      "name": "MJ Chua (Mjchua perfume store)",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/profile.php?id=100082304187718",
+      "links": [
+        "https://www.facebook.com/profile.php?id=100082304187718"
+      ],
+      "linkUnavailable": true,
+      "categories": [
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "infront of olivarez hospital, Parañaque, Philippines, 1700",
+      "hasPhysicalStore": true,
+      "region": "Metro Manila",
+      "location": "1700",
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 8
+    },
+    {
+      "id": "regal-spritz",
+      "name": "Regal Spritz",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://regalspritz.com/",
+      "links": [
+        "https://regalspritz.com/"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers",
+        "Niche"
+      ],
+      "sellsDecants": false,
+      "address": "3F, Gov. A Carpio Avenue, Poblacion 4, Santo Tomas City, Batangas",
+      "hasPhysicalStore": true,
+      "region": "Batangas",
+      "location": "Batangas",
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 9
+    },
+    {
+      "id": "joyful-finds-hub-uae",
+      "name": "Joyful Finds Hub UAE",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/gNpkj6mLI",
+      "links": [
+        "https://s.shopee.ph/gNpkj6mLI"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 10
+    },
+    {
+      "id": "wesworld-online-shop",
+      "name": "Wesworld Online Shop",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/7AZ9AcdpZW",
+      "links": [
+        "https://s.shopee.ph/7AZ9AcdpZW"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "4 Malamig St Teachers Village Diliman Quezon City",
+      "hasPhysicalStore": true,
+      "region": "Metro Manila",
+      "location": "4 Malamig St Teachers Village Diliman Quezon City",
+      "documents": [
+        "SEC Registration",
+        "Mayor's/Business Permit"
+      ],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 11
+    },
+    {
+      "id": "pashabuy",
+      "name": "Pashabuy",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/pashabuynisha",
+      "links": [
+        "https://www.facebook.com/pashabuynisha"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 12
+    },
+    {
+      "id": "mad-kolektiv-ph-and-uae",
+      "name": "Mad Kolektiv - PH & UAE",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/madkolektiv",
+      "links": [
+        "https://www.facebook.com/madkolektiv"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "146 Ignacio St. Pasay City",
+      "hasPhysicalStore": true,
+      "region": "Metro Manila",
+      "location": "146 Ignacio St. Pasay City",
+      "documents": [
+        "Mayor's/Business Permit",
+        "DTI Business Name Registration"
+      ],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 13
+    },
+    {
+      "id": "bs-n-sale",
+      "name": "BS N' SALE",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/bsandsale",
+      "links": [
+        "https://www.facebook.com/bsandsale"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Bath & Body Works",
+        "Victoria's Secret"
+      ],
+      "sellsDecants": false,
+      "address": "58 Victorio Cruz Street, Purok 5 Lower Bicutan, Taguig, Philippines",
+      "hasPhysicalStore": true,
+      "region": "Metro Manila",
+      "location": "Philippines",
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 14
+    },
+    {
+      "id": "kc-good-deals",
+      "name": "KC Good Deals",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/KCGooddeals",
+      "links": [
+        "https://www.facebook.com/KCGooddeals"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 15
+    },
+    {
+      "id": "dubai-pasabuy-batangas",
+      "name": "Dubai Pasabuy Batangas",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/profile.php?id=100057628322108",
+      "links": [
+        "https://www.facebook.com/profile.php?id=100057628322108"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers",
+        "Jewelry"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 16
+    },
+    {
+      "id": "marse-ph",
+      "name": "Marse PH",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/marse.ph.900",
+      "links": [
+        "https://www.facebook.com/marse.ph.900"
+      ],
+      "linkUnavailable": false,
+      "categories": [],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 17
+    },
+    {
+      "id": "jp-fragrance-shop",
+      "name": "JP Fragrance Shop",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/3B4xRiANmv",
+      "links": [
+        "https://s.shopee.ph/3B4xRiANmv"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 18
+    },
+    {
+      "id": "senteur-lounge-sniff-st",
+      "name": "Senteur Lounge (Sniff St.)",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/4AxhvIoRbY",
+      "links": [
+        "https://s.shopee.ph/4AxhvIoRbY"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants",
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [
+        "Business Permit",
+        "DTI Business Name Registration"
+      ],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 19
+    },
+    {
+      "id": "4200hub",
+      "name": "4200HUB",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "TikTok",
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/9zvUq4BjnG",
+      "links": [
+        "https://s.shopee.ph/9zvUq4BjnG"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants",
+        "Middle Eastern"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [
+        "Business Permit",
+        "DTI Business Name Registration"
+      ],
+      "certificate": "",
+      "validity": "May 1, 2027",
+      "rank": 20
+    },
+    {
+      "id": "one-whiff-wonder",
+      "name": "One Whiff Wonder",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/4q8ccytmEO",
+      "links": [
+        "https://s.shopee.ph/4q8ccytmEO"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants",
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 21
+    },
+    {
+      "id": "one-whiff-wonder-ii",
+      "name": "One Whiff Wonder II",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/40ZVdZ6uNr",
+      "links": [
+        "https://s.shopee.ph/40ZVdZ6uNr"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants",
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 22
+    },
+    {
+      "id": "pocket-scents-ph",
+      "name": "Pocket Scents PH",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/50S2pZTrO3",
+      "links": [
+        "https://s.shopee.ph/50S2pZTrO3"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants",
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 23
+    },
+    {
+      "id": "hl-fragrance",
+      "name": "HL_Fragrance",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/4LCM2T7RWf",
+      "links": [
+        "https://s.shopee.ph/4LCM2T7RWf"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired",
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 24
+    },
+    {
+      "id": "scent-society",
+      "name": "Scent Society",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "Instagram",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/1qXcpdhvtJ",
+      "links": [
+        "https://s.shopee.ph/1qXcpdhvtJ"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 25
+    },
+    {
+      "id": "1440-co",
+      "name": "1440 Co.",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok",
+        "Instagram"
+      ],
+      "storeLink": "https://s.shopee.ph/6pwKW1ftcf",
+      "links": [
+        "https://s.shopee.ph/6pwKW1ftcf"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 26
+    },
+    {
+      "id": "sancto",
+      "name": "Sancto",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/W2FDt23pV",
+      "links": [
+        "https://s.shopee.ph/W2FDt23pV"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 27
+    },
+    {
+      "id": "scenthusiast-by-de-luna",
+      "name": "Scenthusiast by De Luna",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/5AlWjSTrtr",
+      "links": [
+        "https://s.shopee.ph/5AlWjSTrtr"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired",
+        "Local Niche",
+        "Aromatherapy"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 28
+    },
+    {
+      "id": "scent-matters",
+      "name": "Scent Matters",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/1VsfgfwN3r",
+      "links": [
+        "https://s.shopee.ph/1VsfgfwN3r"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 29
+    },
+    {
+      "id": "fumes-scents-that-suit-you",
+      "name": "Fumes - Scents that Suit you!",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/7AWd9Wp7K7",
+      "links": [
+        "https://s.shopee.ph/7AWd9Wp7K7"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 30
+    },
+    {
+      "id": "wingman",
+      "name": "Wingman",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok",
+        "Instagram"
+      ],
+      "storeLink": "https://www.facebook.com/ByWingman",
+      "links": [
+        "https://www.facebook.com/ByWingman"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 31
+    },
+    {
+      "id": "overdose-mnl",
+      "name": "Overdose MNL",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/5fkWq6xB7f",
+      "links": [
+        "https://s.shopee.ph/5fkWq6xB7f"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 32
+    },
+    {
+      "id": "hour-dee-parfums",
+      "name": "Hour Dee Parfums",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok",
+        "Shopee"
+      ],
+      "storeLink": "https://s.shopee.ph/5VREU0dVlV",
+      "links": [
+        "https://s.shopee.ph/5VREU0dVlV"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 33
+    },
+    {
+      "id": "jem-perfumery",
+      "name": "Jem Perfumery",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/9ztW1nzKXh",
+      "links": [
+        "https://s.shopee.ph/9ztW1nzKXh"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [
+        "Certificate of Analysis"
+      ],
+      "certificate": "",
+      "validity": "",
+      "rank": 34
+    },
+    {
+      "id": "newyork-army",
+      "name": "Newyork Army",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/7pmkH6muvQ",
+      "links": [
+        "https://s.shopee.ph/7pmkH6muvQ"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "March 30, 2027",
+      "rank": 35
+    },
+    {
+      "id": "valor-extrait",
+      "name": "Valor Extrait",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "Instagram"
+      ],
+      "storeLink": "https://www.facebook.com/ValorExtraitPh",
+      "links": [
+        "https://www.facebook.com/ValorExtraitPh"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 36
+    },
+    {
+      "id": "sapphire-fragrances",
+      "name": "Sapphire Fragrances",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/AKWMR1vlzZ",
+      "links": [
+        "https://s.shopee.ph/AKWMR1vlzZ"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [
+        "Certificate of Analysis"
+      ],
+      "certificate": "",
+      "validity": "",
+      "rank": 37
+    },
+    {
+      "id": "cotidiano-fragrance",
+      "name": "Cotidiano Fragrance",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "Instagram"
+      ],
+      "storeLink": "https://s.shopee.ph/40cItbnlG7",
+      "links": [
+        "https://s.shopee.ph/40cItbnlG7"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 38
+    },
+    {
+      "id": "minimaliscent-fragrances-ii",
+      "name": "MinimaliScent Fragrances II",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/4fq6nMGUPx",
+      "links": [
+        "https://s.shopee.ph/4fq6nMGUPx"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Local-Inspired",
+        "Designers",
+        "Niche"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 39
+    },
+    {
+      "id": "fumes-cartel",
+      "name": "Fumes Cartel",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://s.shopee.ph/1LbXizr7hn",
+      "links": [
+        "https://s.shopee.ph/1LbXizr7hn"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 40
+    },
+    {
+      "id": "compliments-ph",
+      "name": "Compliments PH",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://www.facebook.com/profile.php?id=61573939124921",
+      "links": [
+        "https://www.facebook.com/profile.php?id=61573939124921"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 41
+    },
+    {
+      "id": "elnaris",
+      "name": "Elnaris",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/9ztW3Ekl72",
+      "links": [
+        "https://s.shopee.ph/9ztW3Ekl72"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired",
+        "Own Blends"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 42
+    },
+    {
+      "id": "dindin-fragrance",
+      "name": "Dindin Fragrance",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/6AgnUYhfsq",
+      "links": [
+        "https://s.shopee.ph/6AgnUYhfsq"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 43
+    },
+    {
+      "id": "dab-and-go-ph",
+      "name": "Dab and Go PH",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook",
+        "TikTok"
+      ],
+      "storeLink": "https://www.facebook.com/profile.php?id=100089412907783",
+      "links": [
+        "https://www.facebook.com/profile.php?id=100089412907783"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 44
+    },
+    {
+      "id": "gsp-parfum-collection",
+      "name": "GSP Parfum Collection",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/profile.php?id=61575781821647",
+      "links": [
+        "https://www.facebook.com/profile.php?id=61575781821647"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 45
+    },
+    {
+      "id": "sillage-parfums",
+      "name": "Sillage Parfums",
+      "altNames": [],
+      "tier": "preferred",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://www.facebook.com/profile.php?id=61583629165007",
+      "links": [
+        "https://www.facebook.com/profile.php?id=61583629165007"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 46
+    },
+    {
+      "id": "the-perfume-junkie-ph-by-kieffer-reyes",
+      "name": "The Perfume Junkie PH by Kieffer Reyes",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/7fStRB8APB",
+      "links": [
+        "https://s.shopee.ph/7fStRB8APB"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers",
+        "Niche"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100047
+    },
+    {
+      "id": "shopmixtrade",
+      "name": "shopmixtrade",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/5L7gOh3Dgu",
+      "links": [
+        "https://s.shopee.ph/5L7gOh3Dgu"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100048
+    },
+    {
+      "id": "fofo-s-trading",
+      "name": "Fofo's Trading",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/7KsklqqNpB",
+      "links": [
+        "https://s.shopee.ph/7KsklqqNpB"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100049
+    },
+    {
+      "id": "fragrance-philippines-inc",
+      "name": "Fragrance Philippines Inc.",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/900yjnPVvF",
+      "links": [
+        "https://s.shopee.ph/900yjnPVvF"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100050
+    },
+    {
+      "id": "rvv-xchange",
+      "name": "RVV XCHANGE",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/70DSPyw1uV",
+      "links": [
+        "https://s.shopee.ph/70DSPyw1uV"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100051
+    },
+    {
+      "id": "bridgewater-partners",
+      "name": "BridgeWater Partners",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/4frzZXMkJO",
+      "links": [
+        "https://s.shopee.ph/4frzZXMkJO"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100052
+    },
+    {
+      "id": "dayluxe-online-shop",
+      "name": "Dayluxe Online Shop",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/9AKOx5V6b7",
+      "links": [
+        "https://s.shopee.ph/9AKOx5V6b7"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100053
+    },
+    {
+      "id": "online-trindahan",
+      "name": "Online Trindahan",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/3Ve1RWHkjH",
+      "links": [
+        "https://s.shopee.ph/3Ve1RWHkjH"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100054
+    },
+    {
+      "id": "perfumania-by-pao",
+      "name": "Perfumania by pao",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/50SrjM46Km",
+      "links": [
+        "https://s.shopee.ph/50SrjM46Km"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers",
+        "Niche"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100055
+    },
+    {
+      "id": "larry-scents-shop",
+      "name": "Larry Scents Shop",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/900ynKBZNR",
+      "links": [
+        "https://s.shopee.ph/900ynKBZNR"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100056
+    },
+    {
+      "id": "moredo-perfume-shop",
+      "name": "Moredo Perfume Shop",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/6fd41852IN",
+      "links": [
+        "https://s.shopee.ph/6fd41852IN"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100057
+    },
+    {
+      "id": "all-original-100-by-riza-lina",
+      "name": "All Original 100% by Riza Lina",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/50SO2HIkbQ",
+      "links": [
+        "https://s.shopee.ph/50SO2HIkbQ"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100058
+    },
+    {
+      "id": "bodyrockersph-online-shop",
+      "name": "BODYROCKERSPH ONLINE SHOP",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/3Vg2BJLIjl",
+      "links": [
+        "https://s.shopee.ph/3Vg2BJLIjl"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100059
+    },
+    {
+      "id": "klei-and-kleines-perfume-shop",
+      "name": "Klei and Kleines Perfume Shop",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/AACwBgxYRC",
+      "links": [
+        "https://s.shopee.ph/AACwBgxYRC"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants",
+        "Designers",
+        "Niche",
+        "Middle Eastern"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100060
+    },
+    {
+      "id": "dxb-items-bataan",
+      "name": "DxB Items - Bataan",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/40cImTUWbr",
+      "links": [
+        "https://s.shopee.ph/40cImTUWbr"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100061
+    },
+    {
+      "id": "the-cloud-store-mnl",
+      "name": "The Cloud Store MNL",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/AACw9tbz5m",
+      "links": [
+        "https://s.shopee.ph/AACw9tbz5m"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100062
+    },
+    {
+      "id": "gl-online-shop-ph",
+      "name": "GL Online Shop PH",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/5q3wyqklCC",
+      "links": [
+        "https://s.shopee.ph/5q3wyqklCC"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100063
+    },
+    {
+      "id": "arbab-frags",
+      "name": "Arbab Frags",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/AACwBb0OHM",
+      "links": [
+        "https://s.shopee.ph/AACwBb0OHM"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100064
+    },
+    {
+      "id": "perfumebox",
+      "name": "PerfumeBox",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/4AvizyrCvD",
+      "links": [
+        "https://s.shopee.ph/4AvizyrCvD"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100065
+    },
+    {
+      "id": "kissscenttell",
+      "name": "KissScentTell",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/AKUZeTxBsG",
+      "links": [
+        "https://s.shopee.ph/AKUZeTxBsG"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Designers"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100066
+    },
+    {
+      "id": "xi-s-dubai-pasabuy-ilocos-and-abra",
+      "name": "Xi's Dubai PasaBuy Ilocos&Abra",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/AKWMLqBB1A",
+      "links": [
+        "https://s.shopee.ph/AKWMLqBB1A"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100067
+    },
+    {
+      "id": "fawah-perfume-shop",
+      "name": "Fawah Perfume Shop",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/5VR6b505Hd",
+      "links": [
+        "https://s.shopee.ph/5VR6b505Hd"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100068
+    },
+    {
+      "id": "zesty-ent",
+      "name": "zesty_ent",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/1qXoEPyxfs",
+      "links": [
+        "https://s.shopee.ph/1qXoEPyxfs"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100069
+    },
+    {
+      "id": "yumi-shop2020-m-and-r-shop",
+      "name": "Yumi_Shop2020 (M & R Shop)",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/30jlcaprXI",
+      "links": [
+        "https://s.shopee.ph/30jlcaprXI"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Middle Eastern",
+        "Bath & Body Works",
+        "Victoria's Secret"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100070
+    },
+    {
+      "id": "superb-mom-store-2-0",
+      "name": "SUPERB MOM STORE 2.0",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/7Kskme1O6z",
+      "links": [
+        "https://s.shopee.ph/7Kskme1O6z"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers",
+        "Bath & Body Works",
+        "Victoria's Secret"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100071
+    },
+    {
+      "id": "nosewise-central",
+      "name": "Nosewise Central",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/8phYaxeHqt",
+      "links": [
+        "https://s.shopee.ph/8phYaxeHqt"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Designers",
+        "Minis"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100072
+    },
+    {
+      "id": "takaldecants",
+      "name": "TakalDecants",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/1LbXg04f4D",
+      "links": [
+        "https://s.shopee.ph/1LbXg04f4D"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100073
+    },
+    {
+      "id": "unbox-diaries",
+      "name": "Unbox Diaries",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/2qQLSnX49u",
+      "links": [
+        "https://s.shopee.ph/2qQLSnX49u"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants",
+        "Middle Eastern"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100074
+    },
+    {
+      "id": "fragrancehavenph",
+      "name": "FragranceHavenPH",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [
+        "Facebook"
+      ],
+      "storeLink": "https://s.shopee.ph/10yhHUKcll",
+      "links": [
+        "https://s.shopee.ph/10yhHUKcll"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Decants"
+      ],
+      "sellsDecants": true,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100075
+    },
+    {
+      "id": "symmetry-labs-parfum",
+      "name": "Symmetry Labs Parfum",
+      "altNames": [],
+      "tier": "community",
+      "platforms": [],
+      "storeLink": "https://s.shopee.ph/1Lbind5L8P",
+      "links": [
+        "https://s.shopee.ph/1Lbind5L8P"
+      ],
+      "linkUnavailable": false,
+      "categories": [
+        "Local-Inspired"
+      ],
+      "sellsDecants": false,
+      "address": "",
+      "hasPhysicalStore": false,
+      "region": null,
+      "location": null,
+      "documents": [],
+      "certificate": "",
+      "validity": "",
+      "rank": 100076
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "name": "pfc-master-list",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "An independent connoisseur's directory of trusted Philippine fragrance shops, sourced from the Pinoy Fragheads Community Master List.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "refresh": "node scripts/refresh.mjs",
+    "update": "node scripts/refresh.mjs && node scripts/build.mjs",
+    "preview": "node scripts/build.mjs && npx --yes serve docs"
+  },
+  "engines": { "node": ">=18" }
+}
