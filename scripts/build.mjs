@@ -15,6 +15,9 @@ const OUT = path.join(ROOT, 'docs');
 // Set this to your published URL (e.g. https://username.github.io/pfc-master-list)
 // to emit absolute canonical/OG URLs + a sitemap. Leave '' for relative-only.
 const SITE_URL = '';
+// Root path the site is served from (used for the 404 page's absolute asset
+// links, since GitHub serves /404.html for missing paths at any depth).
+const REPO_BASE = '/pfc-master-list/';
 const SHEET_URL = 'https://docs.google.com/spreadsheets/d/1VOjzatpLBRhArbz7qYiYcYj2Sur7Na-fxaAQTluMWIg/edit?gid=0#gid=0';
 
 /* --------------------------------------------------------------- helpers */
@@ -34,11 +37,21 @@ function joinList(arr) {
   return `${arr.slice(0, -1).join(', ')}, and ${arr[arr.length - 1]}`;
 }
 
+// Parse the free-text validity cell strictly so junk (cert numbers, partial
+// dates) never coerces into a misleading status. Accepts "Month D, YYYY" or
+// "YYYY-MM-DD"; compares date-only (midnight, local) to avoid TZ drift.
 function validityStatus(validity) {
   if (!validity) return null;
-  const d = new Date(validity);
-  if (isNaN(+d)) return null;
-  const days = (d - buildDate) / 86400000;
+  const v = String(validity).trim();
+  let d = null;
+  let m = v.match(/^([A-Za-z]+)\s+(\d{1,2}),\s*(\d{4})$/);
+  if (m) { const p = new Date(`${m[1]} ${m[2]}, ${m[3]}`); if (!isNaN(+p)) d = new Date(p.getFullYear(), p.getMonth(), p.getDate()); }
+  else if ((m = v.match(/^(\d{4})-(\d{2})-(\d{2})$/))) { d = new Date(+m[1], +m[2] - 1, +m[3]); }
+  if (!d || isNaN(+d)) return null;
+  const yr = d.getFullYear();
+  if (yr < 2024 || yr > 2035) return null; // implausible → treat as no status
+  const today = new Date(buildDate.getFullYear(), buildDate.getMonth(), buildDate.getDate());
+  const days = Math.round((d - today) / 86400000);
   if (days < 0) return { cls: 'expired', label: 'Lapsed' };
   if (days < 75) return { cls: 'soon', label: 'Renewing soon' };
   return { cls: 'active', label: 'Active' };
@@ -54,54 +67,76 @@ function platformFromUrl(url) {
   return 'Website';
 }
 
-/* --------------------------------------------------------------- icons */
+/* --------------------------------------------------------------- icons
+   All icons are decorative — emitted with aria-hidden + focusable=false so
+   they never pollute the accessibility tree or heading names. */
+const A = 'aria-hidden="true" focusable="false"';
 const I = {
-  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>',
-  pin: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>',
-  check: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.5l4.5 4.5L19 7"/></svg>',
-  external: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13v6H5V6h6"/></svg>',
-  globe: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg>',
-  facebook: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.3l.4-3h-2.7V9.2c0-.9.3-1.5 1.6-1.5H16V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.6 1.3-3.6 3.8V11H8v3h2.2v7z"/></svg>',
-  instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>',
-  tiktok: '<svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2 1.6 3.6 3.6 3.9v2.4c-1.3 0-2.6-.4-3.6-1.1v5.6a5.4 5.4 0 1 1-5.4-5.4c.3 0 .6 0 .9.1v2.5a2.9 2.9 0 1 0 2 2.7V3z"/></svg>',
-  shopee: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/><path d="M10.5 13c0 1 .8 1.5 1.7 1.5s1.6-.4 1.6-1.3c0-1.7-3-1.1-3-2.7 0-.7.6-1.2 1.5-1.2"/></svg>',
-  lazada: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>',
-  seal: '<svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M32 4l5.5 4.2 6.8-1 2.6 6.4 6.4 2.6-1 6.8L62 32l-4.2 5.5 1 6.8-6.4 2.6-2.6 6.4-6.8-1L32 60l-5.5-4.2-6.8 1-2.6-6.4-6.4-2.6 1-6.8L2 32l4.2-5.5-1-6.8 6.4-2.6 2.6-6.4 6.8 1z"/><path d="M24 32l5.5 5.5L41 26" stroke-width="2"/></svg>',
-  mark: '<svg viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="20" y="3" width="24" height="24" transform="rotate(45 20 20)" rx="2"/><path d="M20 13c2.2 2.6 2.2 11.4 0 14-2.2-2.6-2.2-11.4 0-14z" fill="currentColor" stroke="none"/><circle cx="20" cy="27" r="1.6" fill="currentColor" stroke="none"/></svg>',
+  search: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>`,
+  pin: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s7-6.5 7-12a7 7 0 1 0-14 0c0 5.5 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>`,
+  check: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.5l4.5 4.5L19 7"/></svg>`,
+  external: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 13v6H5V6h6"/></svg>`,
+  globe: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg>`,
+  facebook: `<svg ${A} viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.3l.4-3h-2.7V9.2c0-.9.3-1.5 1.6-1.5H16V5.1c-.3 0-1.2-.1-2.2-.1-2.2 0-3.6 1.3-3.6 3.8V11H8v3h2.2v7z"/></svg>`,
+  instagram: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r="1" fill="currentColor" stroke="none"/></svg>`,
+  tiktok: `<svg ${A} viewBox="0 0 24 24" fill="currentColor"><path d="M16 3c.3 2 1.6 3.6 3.6 3.9v2.4c-1.3 0-2.6-.4-3.6-1.1v5.6a5.4 5.4 0 1 1-5.4-5.4c.3 0 .6 0 .9.1v2.5a2.9 2.9 0 1 0 2 2.7V3z"/></svg>`,
+  shopee: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/><path d="M10.5 13c0 1 .8 1.5 1.7 1.5s1.6-.4 1.6-1.3c0-1.7-3-1.1-3-2.7 0-.7.6-1.2 1.5-1.2"/></svg>`,
+  lazada: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 8h14l-1 12H6z"/><path d="M9 8a3 3 0 0 1 6 0"/></svg>`,
+  seal: `<svg ${A} viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M32 4l5.5 4.2 6.8-1 2.6 6.4 6.4 2.6-1 6.8L62 32l-4.2 5.5 1 6.8-6.4 2.6-2.6 6.4-6.8-1L32 60l-5.5-4.2-6.8 1-2.6-6.4-6.4-2.6 1-6.8L2 32l4.2-5.5-1-6.8 6.4-2.6 2.6-6.4 6.8 1z"/><path d="M24 32l5.5 5.5L41 26" stroke-width="2"/></svg>`,
+  mark: `<svg ${A} viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="20" y="3" width="24" height="24" transform="rotate(45 20 20)" rx="2"/><path d="M20 13c2.2 2.6 2.2 11.4 0 14-2.2-2.6-2.2-11.4 0-14z" fill="currentColor" stroke="none"/><circle cx="20" cy="27" r="1.6" fill="currentColor" stroke="none"/></svg>`,
+  // theme toggle + menu
+  sun: `<svg ${A} class="ic ic-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4"/></svg>`,
+  moon: `<svg ${A} class="ic ic-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/></svg>`,
+  monitor: `<svg ${A} class="ic ic-system" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="12" rx="1.5"/><path d="M8 20h8M12 16v4"/></svg>`,
+  menu: `<svg ${A} viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M4 7h16M4 12h16M4 17h16"/></svg>`,
 };
 const platformIcon = (p) => I[p.toLowerCase()] || I.globe;
+const NEWTAB = '<span class="visually-hidden">(opens in a new tab)</span>';
 
 /* --------------------------------------------------------- shared chrome */
+// Inline, runs before first paint: applies the saved theme (or system), sets
+// color-scheme + theme-color, and flags .js so cards aren't hidden without JS.
+const NOFLASH = `<script>(function(){try{var d=document.documentElement;var s=localStorage.getItem('pfc-theme');var mode=(s==='light'||s==='dark')?s:'system';d.classList.add('js');d.setAttribute('data-theme-mode',mode);if(mode!=='system'){d.setAttribute('data-theme',mode);}var dark=mode==='dark'||(mode==='system'&&matchMedia('(prefers-color-scheme: dark)').matches);d.style.colorScheme=dark?'dark':'light';var m=document.getElementById('theme-color');if(m)m.setAttribute('content',dark?'#0C0B09':'#F6F1E7');}catch(e){}})();</script>`;
+const FONTS = 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500;600&display=swap';
+
 function pageHead(title, desc, base, canonicalPath) {
   const canon = SITE_URL && canonicalPath ? `${SITE_URL}/${canonicalPath}` : '';
   return `<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
-<meta name="theme-color" content="#0C0B09">
+<meta name="theme-color" id="theme-color" content="#0C0B09">
+${NOFLASH}
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(title)}">
 <meta property="og:description" content="${esc(desc)}">
 ${canon ? `<link rel="canonical" href="${esc(canon)}">\n<meta property="og:url" content="${esc(canon)}">` : ''}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="${FONTS}">
+<link rel="stylesheet" href="${FONTS}" media="print" onload="this.media='all'">
+<noscript><link rel="stylesheet" href="${FONTS}"></noscript>
 <link rel="stylesheet" href="${base}assets/styles.css">
 <!--/HEAD-->`;
 }
 
 function header(base) {
-  return `<header class="site-head"><div class="wrap site-head__inner">
+  return `<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-head"><div class="wrap site-head__inner">
   <a class="brand" href="${base}index.html" aria-label="PFC Master List — home">
     <span class="brand__mark">${I.mark}</span>
     <span class="brand__text"><span class="brand__name">The Master List</span><span class="brand__sub">Pinoy Fragheads</span></span>
   </a>
-  <nav class="nav" aria-label="Primary">
-    <a href="${base}index.html#about">The Standard</a>
-    <a href="${base}index.html?tier=preferred">PFC-Preferred</a>
-    <a href="${base}index.html?tier=community">Community</a>
-    <a class="nav__cta" href="${base}index.html#register">Explore →</a>
-  </nav>
+  <div class="head-actions">
+    <nav class="nav" id="nav-menu" aria-label="Primary">
+      <a href="${base}index.html#about">The Standard</a>
+      <a href="${base}index.html?tier=preferred">PFC-Preferred</a>
+      <a href="${base}index.html?tier=community">Community</a>
+      <a href="${base}index.html#register">Explore →</a>
+    </nav>
+    <button class="icon-btn theme-toggle" type="button" aria-label="Theme">${I.sun}${I.moon}${I.monitor}</button>
+    <button class="icon-btn nav__toggle" type="button" aria-label="Menu" aria-expanded="false" aria-controls="nav-menu">${I.menu}</button>
+  </div>
 </div></header>`;
 }
 
@@ -128,7 +163,7 @@ function footer(base, meta) {
       <span class="placeholder-link">PFC on Facebook — add link</span>
       <span class="placeholder-link">PFC on TikTok — add link</span>
       <span class="placeholder-link">PFC on Instagram — add link</span>
-      <a href="${esc(SHEET_URL)}" target="_blank" rel="noopener">Master List source ↗</a>
+      <a href="${esc(SHEET_URL)}" target="_blank" rel="noopener">Master List source ↗${NEWTAB}</a>
     </div>
   </div>
   <p class="disclaimer">${esc(disclaimer)}</p>
@@ -153,19 +188,22 @@ function shopCard(s, base) {
   const plats = s.platforms.map((p) => `<span title="${esc(p)}">${platformIcon(p)}</span>`).join('');
   const cert = s.certificate ? `<span class="card__cert">No. ${esc(s.certificate)}</span>` : '';
   const alt = s.altNames.length ? `<div class="card__alt">also ${esc(s.altNames.join(' · '))}</div>` : '';
+  const tagsHtml = cats || more ? `<div class="tags">${cats}${more}</div>` : '';
 
   const searchBlob = [s.name, ...s.altNames, ...s.categories, s.location, s.region]
     .filter(Boolean).join(' ').toLowerCase();
+  const ariaName = `${s.name} — ${TIER_LABEL[s.tier]}${s.region ? `, ${s.region}` : ''}`;
 
   return `<a class="card-link reveal card card--${tierCls}" href="${base}shop/${s.id}.html"
+    aria-label="${esc(ariaName)}"
     data-tier="${s.tier}" data-cats="${esc(s.categories.join('|'))}" data-region="${esc(s.region || '')}"
     data-store="${s.hasPhysicalStore ? 1 : 0}" data-name="${esc(s.name)}" data-rank="${s.rank}"
     data-search="${esc(searchBlob)}">
     <div class="card__top">${badge}</div>
     <h3 class="card__name">${esc(s.name)}</h3>${alt}
-    <div class="tags">${cats}${more}</div>
-    <div class="card__meta">${loc}<span class="platforms">${plats}</span></div>
-    <div class="card__foot"><span class="card__view">View shop <span class="btn__arrow">→</span></span>${cert}</div>
+    ${tagsHtml}
+    <div class="card__meta">${loc}<span class="platforms" aria-hidden="true">${plats}</span></div>
+    <div class="card__foot"><span class="card__view" aria-hidden="true">View shop <span class="btn__arrow">→</span></span>${cert}</div>
   </a>`;
 }
 
@@ -195,17 +233,17 @@ function indexPage(meta, shops, facets) {
   return `<!-- generated by scripts/build.mjs — edit src/ + data/, then \`npm run build\` -->
 ${pageHead('The Master List — Trusted Philippine Fragrance Shops', desc, '', 'index.html')}
 ${header('')}
-<main>
+<main id="main" tabindex="-1">
   <section class="hero">
     <div class="hero__glow"></div>
     <div class="hero__glyph" aria-hidden="true">P</div>
-    <div class="wrap hero__inner">
+    <div class="wrap hero__inner page-enter">
       <p class="eyebrow">Pinoy Fragheads Community</p>
       <h1>A curated register of the Philippines' most <em>trusted</em> fragrance houses.</h1>
-      <p class="hero__lede">${total} community-vetted shops — ${pref} of them <strong style="color:var(--gold-bright);font-weight:500">PFC-Preferred</strong>, with business documents verified and certificates on file. Browse by house, category, or city, then buy with confidence.</p>
+      <p class="hero__lede">${total} community-vetted shops — ${pref} of them <b>PFC-Preferred</b>, with business documents verified and certificates on file. Browse by house, category, or city, then buy with confidence.</p>
       <p class="hero__tagline">Gawin nating mabango ang Pilipinas — one Filipino at a time.</p>
       <div class="hero__actions">
-        <a class="btn btn--gold" href="#register">Explore the register <span class="btn__arrow">↓</span></a>
+        <a class="btn btn--gold" href="#register">Explore the register <span class="btn__arrow btn__arrow--down">↓</span></a>
         <a class="btn btn--ghost" href="#about">What is PFC-Preferred?</a>
       </div>
       <div class="hero__stats">
@@ -222,9 +260,9 @@ ${header('')}
     <div class="wrap about__grid">
       <div>
         <p class="eyebrow">About the list</p>
-        <p class="about__lede">The official directory of carefully curated, <b>secured, and trusted</b> fragrance shops recommended by the Pinoy Fragheads Community.</p>
+        <h2 class="about__title">The official directory of carefully curated, <b>secured, and trusted</b> fragrance shops recommended by the Pinoy Fragheads Community.</h2>
         <div class="about__body">
-          <p>Every shop here has passed community evaluation — based on personal experience, verified distributors or legitimate sourcing, and strong vouching from members over time. Curated as it is, we still encourage everyone to practice due diligence before buying.</p>
+          <p>${esc(meta.mission) || 'Every shop here has passed community evaluation — based on personal experience, verified distributors or legitimate sourcing, and strong vouching from members over time. Curated as it is, we still encourage everyone to practice due diligence before buying.'}</p>
           <blockquote class="pullquote">Let's keep supporting legit shops, local brands, and gawin nating mabango ang Pilipinas, one Filipino at a time.</blockquote>
         </div>
       </div>
@@ -252,7 +290,7 @@ ${header('')}
       <div class="controls" role="search">
         <div class="controls__row">
           <label class="search">
-            <span class="visually-hidden"></span>${I.search}
+            <span class="visually-hidden">Search the register</span>${I.search}
             <input id="search" type="search" placeholder="Search shops, categories, locations…" aria-label="Search shops">
           </label>
           <div class="segmented" role="group" aria-label="Filter by tier">
@@ -275,9 +313,9 @@ ${header('')}
             </select>
           </div>
         </div>
-        <div class="chips" role="group" aria-label="Filter by category">${chips}</div>
+        <div class="chips" id="chips" role="group" aria-label="Filter by category">${chips}</div>
         <div class="controls__meta">
-          <span id="result-count"><b>${total}</b> shops</span>
+          <span id="result-count" role="status" aria-live="polite" aria-atomic="true">${total} shops</span>
           <button id="clear" class="btn-clear" type="button">Clear all filters</button>
         </div>
       </div>
@@ -307,7 +345,7 @@ function detailPage(s, all, meta) {
   // links
   const linkChips = s.links.map((url) => {
     const p = platformFromUrl(url);
-    return `<a class="linkchip" href="${esc(url)}" target="_blank" rel="noopener">${platformIcon(p)} ${esc(p)} ${I.external}</a>`;
+    return `<a class="linkchip" href="${esc(url)}" target="_blank" rel="noopener">${platformIcon(p)} ${esc(p)} ${I.external}${NEWTAB}</a>`;
   }).join('');
   const platformOnly = s.platforms.filter((p) =>
     !s.links.some((u) => platformFromUrl(u).toLowerCase() === p.toLowerCase()));
@@ -316,7 +354,7 @@ function detailPage(s, all, meta) {
   const unavail = s.linkUnavailable ? `<p class="note-unavail">Note: a listed store link is marked currently unavailable on the source list.</p>` : '';
 
   const primary = s.storeLink
-    ? `<a class="btn btn--gold" href="${esc(s.storeLink)}" target="_blank" rel="noopener" style="margin-bottom:1.4rem">Visit secured store <span class="btn__arrow">↗</span></a>` : '';
+    ? `<a class="btn btn--gold" href="${esc(s.storeLink)}" target="_blank" rel="noopener" style="margin-bottom:1.4rem">Visit secured store <span class="btn__arrow">↗</span>${NEWTAB}</a>` : '';
 
   // credential aside
   let aside;
@@ -361,7 +399,7 @@ function detailPage(s, all, meta) {
 
   return `${pageHead(`${s.name} — PFC Master List`, desc, base, `shop/${s.id}.html`)}
 ${header(base)}
-<main class="detail">
+<main id="main" tabindex="-1" class="detail">
   <div class="wrap wrap--wide">
     <div class="detail__head">
       <a class="backlink" href="${base}index.html#register"><span class="btn__arrow">←</span> The Register</a>
@@ -427,15 +465,15 @@ function run() {
   fs.writeFileSync(path.join(OUT, '.nojekyll'), '', 'utf8'); // GitHub Pages: skip Jekyll
 
   writePage(path.join(OUT, '404.html'),
-    `${pageHead('Not found — PFC Master List', 'Page not found.', '', '')}
-${header('')}
-<main class="detail"><div class="wrap" style="text-align:center;padding-block:6rem">
+    `${pageHead('Not found — PFC Master List', 'Page not found.', REPO_BASE, '')}
+${header(REPO_BASE)}
+<main id="main" tabindex="-1" class="detail"><div class="wrap" style="text-align:center;padding-block:6rem">
   <p class="eyebrow">404</p>
   <h1 style="font-family:var(--serif);font-size:clamp(2.5rem,6vw,4.5rem);font-weight:500;margin:1rem 0">This scent has evaporated.</h1>
   <p style="color:var(--muted);margin-bottom:2rem">The page you're looking for isn't here.</p>
-  <a class="btn btn--gold" href="index.html">Back to the register</a>
+  <a class="btn btn--gold" href="${REPO_BASE}index.html">Back to the register</a>
 </div></main>
-${footer('', meta)}`);
+${footer(REPO_BASE, meta)}`);
 
   if (SITE_URL) {
     const urls = ['index.html', ...shops.map((s) => `shop/${s.id}.html`)]

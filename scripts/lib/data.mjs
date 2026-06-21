@@ -24,7 +24,9 @@ export function parseCSV(text) {
       } else {
         field += c;
       }
-    } else if (c === '"') {
+    } else if (c === '"' && field === '') {
+      // RFC-4180: a quote only opens a quoted field at the field's start.
+      // A quote mid-field (e.g. an inch mark 5") is a literal character.
       inQuotes = true;
     } else if (c === ',') {
       row.push(field); field = '';
@@ -154,7 +156,11 @@ function deriveLocationLabel(address) {
   const a = clean(address).replace(/\s+/g, ' ');
   if (!a) return null;
   const segs = a.split(',').map((s) => s.trim().replace(/^[^A-Za-z0-9]+/, '').trim()).filter(Boolean);
-  return segs.length ? segs[segs.length - 1] : a;
+  // Walk from the end, skipping postal codes and the country, to the most
+  // specific real place name (e.g. "Parañaque", not "1700").
+  const skip = (s) => !s || /^\d+$/.test(s) || /^(philippines|ph)$/i.test(s) || !/[A-Za-z]/.test(s);
+  for (let i = segs.length - 1; i >= 0; i--) if (!skip(segs[i])) return segs[i];
+  return segs[segs.length - 1] || a;
 }
 
 function extractUrls(cell) {
