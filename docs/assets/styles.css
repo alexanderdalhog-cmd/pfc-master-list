@@ -424,7 +424,23 @@ html:not([data-theme-mode]) .theme-toggle .ic-system { display: block; } /* fall
 .card:hover::after { opacity: 1; }
 .card:active { transform: translateY(-2px); }
 
-.card__top { display: flex; justify-content: space-between; align-items: flex-start; gap: 0.8rem; margin-bottom: 1rem; }
+.card__top { display: flex; justify-content: space-between; align-items: center; gap: 0.8rem; margin-bottom: 1rem; }
+
+/* shop avatar — real logo or monogram */
+.avatar {
+  width: 46px; height: 46px; flex: none; border-radius: 50%;
+  display: inline-flex; align-items: center; justify-content: center;
+  font-family: var(--serif); font-weight: 500; font-size: 1.1rem; line-height: 1; letter-spacing: 0.02em;
+  color: var(--gold-bright); background: radial-gradient(circle at 32% 26%, var(--surface-3), var(--ink-1));
+  border: 1px solid var(--gold-deep); overflow: hidden;
+  transition: border-color var(--dur-base) var(--ease), transform var(--dur-base) var(--ease);
+}
+.avatar--comm { color: var(--silver); border-color: var(--silver-deep); }
+.avatar img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.avatar--lg { width: 72px; height: 72px; font-size: 1.7rem; }
+.card:hover .avatar { border-color: var(--gold); transform: scale(1.04); }
+.card--comm:hover .avatar { border-color: var(--silver); }
+.detail__avatar { margin: 1.6rem 0 0.4rem; }
 .badge { display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.32rem 0.7rem; border-radius: 100px; font-size: 0.62rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 600; white-space: nowrap; }
 .badge--pref { color: var(--gold-bright); border: 1px solid var(--gold-deep); background: var(--tint-gold); }
 .badge--comm { color: var(--silver); border: 1px solid var(--silver-deep); background: var(--tint-silver); }

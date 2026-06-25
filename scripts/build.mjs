@@ -93,6 +93,27 @@ const I = {
 const platformIcon = (p) => I[p.toLowerCase()] || I.globe;
 const NEWTAB = '<span class="visually-hidden">(opens in a new tab)</span>';
 
+// Dark-chip favicon using the brand mark (gem + droplet).
+const FAVICON = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#0C0B09"/><rect x="20" y="10" width="30" height="30" rx="3" transform="rotate(45 32 28)" fill="none" stroke="#C8A45D" stroke-width="2.4"/><path d="M32 19c3.2 3.6 3.2 14.4 0 18-3.2-3.6-3.2-14.4 0-18z" fill="#C8A45D"/><circle cx="32" cy="40" r="2.2" fill="#C8A45D"/></svg>`;
+
+// Two-letter monogram from a shop name (skips filler words).
+const MONO_STOP = new Set(['the', 'by', 'and', 'of', 'ph', 'co', 'inc', 'shop', 'store']);
+function monogram(name) {
+  const words = String(name).replace(/[^A-Za-z0-9\s]/g, ' ').split(/\s+/).filter(Boolean);
+  const sig = words.filter((w) => !MONO_STOP.has(w.toLowerCase()));
+  const pick = sig.length ? sig : words;
+  if (!pick.length) return 'PFC';
+  if (pick.length === 1) return (pick[0].length >= 2 ? pick[0].slice(0, 2) : pick[0]).toUpperCase();
+  return (pick[0][0] + pick[1][0]).toUpperCase();
+}
+
+// Shop avatar: real logo (src/logos/<id>.*) if present, else the monogram.
+function avatar(s, base, lg) {
+  const cls = `avatar ${s.tier === 'preferred' ? 'avatar--pref' : 'avatar--comm'}${lg ? ' avatar--lg' : ''}`;
+  if (s.logoFile) return `<span class="${cls}"><img src="${base}assets/${s.logoFile}" alt="" loading="lazy" decoding="async"></span>`;
+  return `<span class="${cls}" aria-hidden="true">${esc(monogram(s.name))}</span>`;
+}
+
 /* --------------------------------------------------------- shared chrome */
 // Inline, runs before first paint: applies the saved theme (or system), sets
 // color-scheme + theme-color, and flags .js so cards aren't hidden without JS.
@@ -106,6 +127,7 @@ function pageHead(title, desc, base, canonicalPath) {
 <title>${esc(title)}</title>
 <meta name="description" content="${esc(desc)}">
 <meta name="theme-color" id="theme-color" content="#0C0B09">
+<link rel="icon" href="${base}favicon.svg" type="image/svg+xml">
 ${NOFLASH}
 <meta property="og:type" content="website">
 <meta property="og:title" content="${esc(title)}">
@@ -199,7 +221,7 @@ function shopCard(s, base) {
     data-tier="${s.tier}" data-cats="${esc(s.categories.join('|'))}" data-region="${esc(s.region || '')}"
     data-store="${s.hasPhysicalStore ? 1 : 0}" data-name="${esc(s.name)}" data-rank="${s.rank}"
     data-search="${esc(searchBlob)}">
-    <div class="card__top">${badge}</div>
+    <div class="card__top">${avatar(s, base)}${badge}</div>
     <h3 class="card__name">${esc(s.name)}</h3>${alt}
     ${tagsHtml}
     <div class="card__meta">${loc}<span class="platforms" aria-hidden="true">${plats}</span></div>
@@ -403,7 +425,8 @@ ${header(base)}
   <div class="wrap wrap--wide">
     <div class="detail__head">
       <a class="backlink" href="${base}index.html#register"><span class="btn__arrow">←</span> The Register</a>
-      <p class="eyebrow" style="margin-top:1.6rem">${esc(tierLabel)}</p>
+      <div class="detail__avatar">${avatar(s, base, true)}</div>
+      <p class="eyebrow">${esc(tierLabel)}</p>
       <h1>${esc(s.name)}</h1>
       ${s.altNames.length ? `<div class="card__alt">also known as ${esc(s.altNames.join(' · '))}</div>` : ''}
       <div class="tags" style="margin-top:1.2rem">${tags}</div>
@@ -452,7 +475,25 @@ function run() {
   rmrf(OUT);
   ensure(path.join(OUT, 'shop'));
   ensure(path.join(OUT, 'assets'));
+  ensure(path.join(OUT, 'assets', 'logos'));
   ensure(path.join(OUT, 'data'));
+
+  // Real logos: drop a file at src/logos/<shop-id>.{svg,png,webp,jpg} and it is
+  // used automatically; otherwise the shop shows an elegant monogram avatar.
+  const LOGO_SRC = path.join(ROOT, 'src', 'logos');
+  const LOGO_EXT = ['svg', 'png', 'webp', 'jpg', 'jpeg'];
+  let logoCount = 0;
+  for (const s of shops) {
+    for (const e of LOGO_EXT) {
+      const f = path.join(LOGO_SRC, `${s.id}.${e}`);
+      if (fs.existsSync(f)) {
+        fs.copyFileSync(f, path.join(OUT, 'assets', 'logos', `${s.id}.${e}`));
+        s.logoFile = `logos/${s.id}.${e}`; logoCount++; break;
+      }
+    }
+  }
+
+  fs.writeFileSync(path.join(OUT, 'favicon.svg'), FAVICON, 'utf8');
 
   writePage(path.join(OUT, 'index.html'), indexPage(meta, shops, facets));
   for (const s of shops) writePage(path.join(OUT, 'shop', `${s.id}.html`), detailPage(s, shops, meta));
@@ -484,6 +525,7 @@ ${footer(REPO_BASE, meta)}`);
 
   console.log(`✓ Built ${shops.length} shops → ${path.relative(ROOT, OUT)}`);
   console.log(`  index.html · ${shops.length} detail pages · assets · shops.json`);
+  console.log(`  logos: ${logoCount} real, ${shops.length - logoCount} monogram`);
 }
 
 run();
